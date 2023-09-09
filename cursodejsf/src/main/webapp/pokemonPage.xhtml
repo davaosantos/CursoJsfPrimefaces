@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+		<title>Página de pokemon</title>
+	</h:head>
+	
+	<h:body>
+		<h:form id="formPokemon">
+			<h:inputText value="#{pokemonBean.qtdAtk}"></h:inputText>
+			<br/>
+			<h:outputText value="#{pokemonBean.qtdVida}"></h:outputText>
+			<br/>
+			<h:commandButton value="Atacar" action="#{pokemonBean.perdeVida}"></h:commandButton>
+		</h:form>
+	</h:body>
+</html>

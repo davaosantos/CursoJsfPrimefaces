@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Olá jsf</title>
+	<script>
+		function alterarValorDoCampo(){
+			alert('clicou');
+			var campo = document.getElementById('formPessoa:nome');
+			campo.value = 'eu cliquei no campo';
+		}
+	</script>
+</h:head>
+
+<h:body>
+	<h:form id="formPessoa">
+		<h1>Olá JSF pagina index.jsf</h1>
+		<h:inputText id="nome" onclick="this.value = 'troquei o valor'" onchange="this.value = this.value.toUpperCase();"></h:inputText>
+		<h:commandButton value="Clicar" onclick="alterarValorDoCampo()"></h:commandButton>
+		
+		<br/>
+		<br/>
+		<br/>
+		<h:commandButton value="navegar" action="primeirapagina"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
